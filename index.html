@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILLING INTRODUCTION - Politeknik ATMI Surakarta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= HEADER WEBSITE ================= -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-identity">
+                <img src="assets/images/logo/logo-atmi.png" alt="Logo Politeknik ATMI Surakarta" class="institute-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/50x50?text=ATMI';">
+                <div class="brand-titles">
+                    <span class="institute-name">POLITEKNIK ATMI SURAKARTA</span>
+                    <h1 class="main-title">MILLING INTRODUCTION</h1>
+                    <span class="sub-title">Media Pembelajaran Interaktif – Praktik Frais Dasar</span>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="globalSearch" placeholder="Cari materi, tools, K3..." onkeyup="handleSearch()">
+                    <div id="searchResults" class="search-dropdown hidden"></div>
+                </div>
+                <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Menu Mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= TOP NAVIGATION BAR (NO SIDEBAR) ================= -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="nav-container">
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> HOME</a></li>
+                <li class="nav-item"><a href="#materi" class="nav-link"><i class="fas fa-book-open"></i> DASAR MILLING</a></li>
+                <li class="nav-item"><a href="#mesin" class="nav-link"><i class="fas fa-cogs"></i> MESIN MILLING</a></li>
+                <li class="nav-item"><a href="#cutting-condition" class="nav-link"><i class="fas fa-calculator"></i> CUTTING CONDITION</a></li>
+                <li class="nav-item"><a href="#cutting-tools" class="nav-link"><i class="fas fa-cut"></i> CUTTING TOOLS</a></li>
+                <li class="nav-item"><a href="#aksesori" class="nav-link"><i class="fas fa-tools"></i> AKSESORI</a></li>
+                <li class="nav-item"><a href="#praktik" class="nav-link"><i class="fas fa-tasks"></i> PRAKTIK</a></li>
+                <li class="nav-item"><a href="#work-prep" class="nav-link"><i class="fas fa-list-ol"></i> WORK PREPARATION</a></li>
+                <li class="nav-item"><a href="#alat-ukur" class="nav-link"><i class="fas fa-ruler-combined"></i> ALAT UKUR</a></li>
+                <li class="nav-item"><a href="#penilaian" class="nav-link"><i class="fas fa-chart-bar"></i> PENILAIAN</a></li>
+                <li class="nav-item"><a href="#k3" class="nav-link"><i class="fas fa-shield-alt"></i> K3 & 5R</a></li>
+                <li class="nav-item"><a href="#aturan" class="nav-link"><i class="fas fa-clipboard-list"></i> ATURAN SECTION</a></li>
+                <li class="nav-item"><a href="#target" class="nav-link"><i class="fas fa-bullseye"></i> TARGET</a></li>
+                <li class="nav-item"><a href="#evaluasi" class="nav-link"><i class="fas fa-graduation-cap"></i> EVALUASI</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN FULL-WIDTH CONTENT ================= -->
+    <main class="main-content-area">
+
+        <!-- STATUS PROGRESS BAR -->
+        <div class="user-progress-bar-container">
+            <div class="progress-info">
+                <span><i class="fas fa-tasks"></i> Progress Pembelajaran Anda:</span>
+                <span id="progressPercentageText">0% Selesai (0 / 14 Modul)</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="content-section active-section">
+            <div class="hero-card">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-badge"><i class="fas fa-university"></i> POLITEKNIK ATMI SURAKARTA</span>
+                    <h1>MILLING INTRODUCTION</h1>
+                    <p class="hero-subtitle">Media Pembelajaran Interaktif Praktik Frais Dasar Teknik Manufaktur</p>
+                    <p class="hero-desc">Platform digital resmi untuk mendukung pemahaman teori, kalkulasi pemesinan, standar K3, serta langkah kerja praktikum Milling secara komprehensif.</p>
+                    <div class="hero-buttons">
+                        <a href="#materi" class="btn btn-primary" onclick="navigateToSection('materi')"><i class="fas fa-play-circle"></i> MULAI BELAJAR</a>
+                        <a href="#cutting-condition" class="btn btn-secondary" onclick="navigateToSection('cutting-condition')"><i class="fas fa-calculator"></i> KALKULATOR MILLING</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2><i class="fas fa-th-large"></i> Ringkasan Modul Pembelajaran</h2>
+                <p>Pilih topik yang ingin Anda pelajari atau ikuti alur kurikulum secara runtut.</p>
+            </div>
+
+            <div class="grid-container grid-3-cols">
+                <div class="overview-card" onclick="navigateToSection('materi')">
+                    <div class="card-icon"><i class="fas fa-cog"></i></div>
+                    <h3>Dasar Milling</h3>
+                    <p>Prinsip pemotongan, gerakan pemakanan, face cutting, side cutting, climbing & conventional milling.</p>
+                </div>
+                <div class="overview-card" onclick="navigateToSection('mesin')">
+                    <div class="card-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Mesin Milling</h3>
+                    <p>Pengenalan jenis mesin Vertikal, Horisontal, Universal, Copy, Hobbing, Gravier, Planer & CNC.</p>
+                </div>
+                <div class="overview-card" onclick="navigateToSection('cutting-condition')">
+                    <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                    <h3>Cutting Condition</h3>
+                    <p>Perhitungan Cutting Speed (Cs), Spindle Speed (n), Feeding (s), dan Time Calculation (Th).</p>
+                </div>
+                <div class="overview-card" onclick="navigateToSection('cutting-tools')">
+                    <div class="card-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Cutting Tools</h3>
+                    <p>Spesifikasi End Mill, Shell End Mill, Disk Cutter, T-Slot, Dove Tail, Twist Drill & Reamer.</p>
+                </div>
+                <div class="overview-card" onclick="navigateToSection('aksesori')">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Aksesori Mesin</h3>
+                    <p>Penggunaan Arbor (Collet, Stub, Long), Tanggem (Fixed, Swivel, Compound), Rotary Table & Dividing Head.</p>
+                </div>
+                <div class="overview-card" onclick="navigateToSection('praktik')">
+                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Practice Milling</h3>
+                    <p>Panduan Praktik 1 (Blocking/Kesikuan), Praktik 2 (Stepping/Tapping), Praktik 3 (ISO), & Praktik 4 (Hexagon).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MATERI DASAR MILLING -->
+        <section id="materi" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-book-open"></i> BAB 1 – DASAR-DASAR MILLING</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('materi')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-2-cols">
+                <div class="content-card">
+                    <h3><i class="fas fa-info-circle"></i> Definisi & Prinsip Kerja</h3>
+                    <p><strong>Proses Milling (Frais):</strong> Proses pemesinan konvensional di mana alat potong yang berputar (Cutter) mengikis dan mengurangi material dari benda kerja untuk menghasilkan permukaan rata atau profil spesifik dengan menghasilkan tatal (chip)[cite: 1, 2].</p>
+                    <p><strong>Prinsip Kerja Utama:</strong> Benda kerja diam atau bergerak bersama meja mesin mendekati alat potong (Cutter) yang berputar pada poros utama (Spindle)[cite: 1, 2].</p>
+                    <div class="info-box accent-box">
+                        <h4><i class="fas fa-bullseye"></i> Tujuan Pengerjaan Milling</h4>
+                        <ul>
+                            <li>Pengerjaan Flat / Rata[cite: 2]</li>
+                            <li>Pengerjaan Step / Bertingkat[cite: 2]</li>
+                            <li>Pengerjaan Slot / Alur & Profile[cite: 2]</li>
+                            <li>Pengerjaan Radius, Chamfer, & Silindris[cite: 2]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-arrows-alt"></i> 3 Gerakan Utama Pada Mesin Milling</h3>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <span class="step-number">1</span>
+                            <div>
+                                <h4>Gerakan Utama (Spindle Rotation)</h4>
+                                <p>Gerakan berputarnya alat potong pada spindle utama. Satuan: <strong>rpm</strong> (rotasi per menit), Simbol: <strong>n</strong>[cite: 2].</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">2</span>
+                            <div>
+                                <h4>Gerakan Pemakanan (Feeding)</h4>
+                                <p>Gerakan benda kerja menuju cutter saat pemotongan. Satuan: <strong>mm/menit</strong>, Simbol: <strong>s</strong>[cite: 2].</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">3</span>
+                            <div>
+                                <h4>Gerakan Setting (Depth of Cut)</h4>
+                                <p>Gerakan mendekatkan/mengatur kedalaman potong benda kerja ke cutter. Satuan: <strong>mm</strong>, Simbol: <strong>a / t</strong>[cite: 2].</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card margin-top">
+                <h3><i class="fas fa-cut"></i> Jenis Pemotongan Milling</h3>
+                <div class="grid-container grid-2-cols">
+                    <div class="sub-card">
+                        <h4>1. Pemotongan Face Cutting</h4>
+                        <p>Pemotongan benda kerja dengan menggunakan sisi potong bagian depan (Face) dari alat potong (Cutter)[cite: 1, 2].</p>
+                        <div class="image-container-box">
+                            <img src="assets/images/milling/face-cutting.png" alt="Face Cutting" onerror="this.src='https://via.placeholder.com/300x180?text=Face+Cutting';">
+                        </div>
+                    </div>
+                    <div class="sub-card">
+                        <h4>2. Pemotongan Side Cutting</h4>
+                        <p>Pemotongan menggunakan sisi potong bagian samping (Side) dari alat potong (Cutter)[cite: 1, 2].</p>
+                        <div class="image-container-box">
+                            <img src="assets/images/milling/side-cutting.png" alt="Side Cutting" onerror="this.src='https://via.placeholder.com/300x180?text=Side+Cutting';">
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="margin-top"><i class="fas fa-exchange-alt"></i> Metode Side Cutting: Climbing vs Conventional Milling</h4>
+                <div class="table-responsive">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Climbing Milling (Searah)</th>
+                                <th>Conventional Milling (Berlawanan)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Arah Putaran vs Feeding</strong></td>
+                                <td>Arah putaran cutter <strong>searah</strong> dengan arah gerakan pemakanan (feeding)[cite: 1, 2].</td>
+                                <td>Arah putaran cutter <strong>berlawanan</strong> dengan arah gerakan pemakanan (feeding)[cite: 1, 2].</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gaya Potong</strong></td>
+                                <td>Gaya tekan ke bawah (Plain Cutter)[cite: 2].</td>
+                                <td>Gaya tekan ke atas (Plain Cutter)[cite: 2].</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ketebalan Tatal</strong></td>
+                                <td>Dimulai dari tebal (maksimum) ke tipis (minimum)[cite: 2].</td>
+                                <td>Dimulai dari tipis (minimum) ke tebal (maksimum)[cite: 2].</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kondisi Mesin</strong></td>
+                                <td>Digunakan pada mesin dengan <i>backlash/spelleng</i> kecil (Mesin CNC)[cite: 2].</td>
+                                <td>Digunakan pada mesin konvensional dengan <i>spelleng</i> cukup besar[cite: 2].</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MESIN MILLING -->
+        <section id="mesin" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-cogs"></i> JENIS & KOMPONEN MESIN MILLING</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('mesin')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-cubes"></i> 8 Bagian Utama Mesin Milling</h3>
+                <div class="grid-container grid-4-cols">
+                    <div class="part-card">
+                        <span class="badge">1</span>
+                        <h4>Spindle Utama</h4>
+                        <p>Tempat pencekaman alat potong (Vertical, Horizontal, Universal Spindle)[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">2</span>
+                        <h4>Meja (Table)</h4>
+                        <p>Tempat meletakkan benda kerja atau clamping device (Fixed, Swivel, Compound)[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">3</span>
+                        <h4>Motor Drive</h4>
+                        <p>Penggerak spindle, feeding, dan pompa coolant[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">4</span>
+                        <h4>Transmisi</h4>
+                        <p>Penghubung motor ke bagian mesin (Sistem Gear Box / V-Belt)[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">5</span>
+                        <h4>Knee</h4>
+                        <p>Menopang meja dan memuat transmisi gerakan pemakanan[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">6</span>
+                        <h4>Column / Tiang</h4>
+                        <p>Badan utama mesin tempat melekatnya komponen lain[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">7</span>
+                        <h4>Base / Dasar</h4>
+                        <p>Landasan penopang mesin dan penampung cairan pendingin[cite: 2].</p>
+                    </div>
+                    <div class="part-card">
+                        <span class="badge">8</span>
+                        <h4>Control System</h4>
+                        <p>Pengatur gerakan mesin (Mekanik, Elektrik, CNC)[cite: 2].</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card margin-top">
+                <h3><i class="fas fa-list"></i> Klasifikasi Mesin Milling Berdasarkan Fungsi & Konstruksi</h3>
+                <div class="grid-container grid-3-cols">
+                    <div class="machine-type-card">
+                        <h4>Milling Vertikal</h4>
+                        <p>Spindle utama berposisi tegak lurus (vertikal) terhadap meja mesin[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling Horisontal</h4>
+                        <p>Spindle utama mendatar, cocok untuk pengerjaan arbor panjang & plain cutter[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling Universal</h4>
+                        <p>Kombinasi vertikal dan horisontal dengan meja yang dapat diputar (swivel)[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling Copy</h4>
+                        <p>Mengikuti pola master/mal dengan sistem hidrolik untuk bentuk rumit[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling Hobbing</h4>
+                        <p>Spesifik untuk pembuatan roda gigi (gear/sprocket) secara presisi[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling Gravier</h4>
+                        <p>Digunakan untuk pembuatan huruf, angka, atau ukiran berskala[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling Planer</h4>
+                        <p>Mesin ukuran sangat besar untuk pemotongan permukaan benda kerja berat[cite: 2].</p>
+                    </div>
+                    <div class="machine-type-card">
+                        <h4>Milling CNC</h4>
+                        <p>Kontrol komputer otomatis penuh untuk kompleksitas tinggi[cite: 2].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CUTTING CONDITION & KALKULATOR -->
+        <section id="cutting-condition" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-calculator"></i> CUTTING CONDITION & KALKULATOR PEMESINAN</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('cutting-condition')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-2-cols">
+                <!-- KALKULATOR INTERAKTIF -->
+                <div class="content-card calc-card-highlight">
+                    <h3><i class="fas fa-calculator"></i> Kalkulator Spindle Speed (RPM) & Feeding</h3>
+                    <form id="millingCalcForm" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="calcDiameter">Diameter Cutter (d) [mm]:</label>
+                            <input type="number" id="calcDiameter" placeholder="Contoh: 20" value="20" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calcCs">Cutting Speed (Cs) [m/menit]:</label>
+                            <input type="number" id="calcCs" placeholder="Contoh: 32" value="32" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calcZ">Jumlah Gigi Cutter (z):</label>
+                            <input type="number" id="calcZ" placeholder="Contoh: 4" value="4">
+                        </div>
+                        <div class="form-group">
+                            <label for="calcSz">Feed per Tooth (sz) [mm/tooth]:</label>
+                            <input type="number" step="0.01" id="calcSz" placeholder="Contoh: 0.05" value="0.05">
+                        </div>
+                        <button type="button" class="btn btn-accent" onclick="calculateMilling()"><i class="fas fa-cogs"></i> Hitung Parameter</button>
+                    </form>
+
+                    <div id="calcResults" class="calc-results-box margin-top">
+                        <h4>Hasil Perhitungan:</h4>
+                        <div class="result-item">
+                            <span>Putaran Spindle (n):</span>
+                            <strong id="resN">0 RPM</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Kecepatan Pemakanan (s):</span>
+                            <strong id="resS">0 mm/menit</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUMUS DAN TEORI -->
+                <div class="content-card">
+                    <h3><i class="fas fa-square-root-alt"></i> Rumus Parameter Pemesinan</h3>
+                    
+                    <div class="formula-box">
+                        <h4>1. Kecepatan Potong (Cutting Speed - Cs)</h4>
+                        <p class="formula-display">$$Cs = \frac{\pi \times d \times n}{1000} \quad \text{[m/menit]}$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>2. Putaran Spindle Utama (n)</h4>
+                        <p class="formula-display">$$n = \frac{1000 \times Cs}{\pi \times d} \quad \text{[rpm]}$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>3. Feeding per Minute (s)</h4>
+                        <p class="formula-display">$$s = z \times n \times s_z \quad \text{[mm/menit]}$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>4. Waktu Pemotongan Efektif (Time Calculation - Th)</h4>
+                        <p class="formula-display">$$Th = \frac{L \times i}{s} \quad \text{[menit]}$$</p>
+                        <small>Dimana $L = l + l_a + l_u$ (Panjang langkah total)[cite: 2].</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CUTTING TOOLS -->
+        <section id="cutting-tools" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-cut"></i> CUTTING TOOLS (ALAT POTONG)</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('cutting-tools')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-3-cols" id="toolsGrid">
+                <!-- CARDS DI-GENERATE SECARA DINAMIS VIA JS KARENA BANYAK ASSET -->
+            </div>
+        </section>
+
+        <!-- SECTION 6: AKSESORI MESIN MILLING -->
+        <section id="aksesori" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-tools"></i> AKSESORI MESIN MILLING</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('aksesori')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-3-cols" id="aksesoriGrid">
+                <!-- CARDS DI-GENERATE SECARA DINAMIS VIA JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 7: PRACTICE MILLING SECTION -->
+        <section id="praktik" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-layer-group"></i> PRACTICE MILLING SECTION</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('praktik')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-2-cols">
+                <div class="practice-card" onclick="openPracticeModal(1)">
+                    <div class="practice-header">
+                        <span class="practice-badge">PRACTICE 1</span>
+                        <h3>Blocking & Geometri Dasar</h3>
+                    </div>
+                    <p>Proses pembuatan blocking benda kerja dengan target utama kesikuan (Perpendicular) dan kesejajaran (Parallelism)[cite: 1].</p>
+                    <div class="btn-text"><i class="fas fa-eye"></i> Lihat Detail Praktik 1</div>
+                </div>
+
+                <div class="practice-card" onclick="openPracticeModal(2)">
+                    <div class="practice-header">
+                        <span class="practice-badge">PRACTICE 2</span>
+                        <h3>Stepping & Fitur Elemen</h3>
+                    </div>
+                    <p>Proses pemesinan pembuatan Stepping, Chamfering, Drilling, dan Tapping[cite: 1].</p>
+                    <div class="btn-text"><i class="fas fa-eye"></i> Lihat Detail Praktik 2</div>
+                </div>
+
+                <div class="practice-card" onclick="openPracticeModal(3)">
+                    <div class="practice-header">
+                        <span class="practice-badge">PRACTICE 3</span>
+                        <h3>Stepping ISO & Boring</h3>
+                    </div>
+                    <p>Proses pembuatan Stepping dengan toleransi ISO, Slotting, serta Drilling dengan Boring Head[cite: 1].</p>
+                    <div class="btn-text"><i class="fas fa-eye"></i> Lihat Detail Praktik 3</div>
+                </div>
+
+                <div class="practice-card" onclick="openPracticeModal(4)">
+                    <div class="practice-header">
+                        <span class="practice-badge">PRACTICE 4</span>
+                        <h3>Hexagon & Dividing Head</h3>
+                    </div>
+                    <p>Proses pembuatan profil segi enam (Hexagon Profile) menggunakan piring pembagi (Dividing Head)[cite: 1].</p>
+                    <div class="btn-text"><i class="fas fa-eye"></i> Lihat Detail Praktik 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: WORK PREPARATION -->
+        <section id="work-prep" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-list-ol"></i> WORK PREPARATION (WP)</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('work-prep')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="content-card">
+                <h3>Urutan Langkah Kerja Standar Pengerjaan Milling Blok</h3>
+                <div class="timeline-interactive">
+                    <div class="timeline-step">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h4>Langkah 1: Referensi Bidang Tebal (Bidang 1)</h4>
+                            <p>Cekam bidang 2 di Fixed Jaw (FJ) dan bidang 5 di Moving Jaw (MJ), sayat bidang 1 <i>just clean</i> dan rata. Menjadikan Bidang 1 sebagai referensi[cite: 1].</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h4>Langkah 2: Referensi Bidang Lebar (Bidang 2)</h4>
+                            <p>Cekam bidang 1 di FJ dan bidang 4 di MJ, sayat bidang 2 <i>just clean</i>, rata & siku[cite: 1].</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h4>Langkah 3: Referensi Bidang Panjang (Bidang 3)</h4>
+                            <p>Cekam bidang 1 di FJ dan bidang 4 di MJ, sayat bidang 3 <i>just clean</i>, rata & siku[cite: 1].</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">4</div>
+                        <div class="step-content">
+                            <h4>Langkah 4: Memasukkan Ukuran Tebal (Bidang 4)</h4>
+                            <p>Cekam bidang 2 di FJ dan bidang 5 di MJ, sayat bidang 4 masukkan ukuran tebal, rata, siku, & sejajar[cite: 1].</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">5</div>
+                        <div class="step-content">
+                            <h4>Langkah 5: Memasukkan Ukuran Lebar (Bidang 5)</h4>
+                            <p>Cekam bidang 1 di FJ dan bidang 4 di MJ, sayat bidang 5 masukkan ukuran lebar, rata, siku, & sejajar[cite: 1].</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">6</div>
+                        <div class="step-content">
+                            <h4>Langkah 6: Memasukkan Ukuran Panjang (Bidang 6)</h4>
+                            <p>Cekam bidang 1 di FJ dan bidang 4 di MJ, sayat bidang 6 masukkan ukuran panjang, rata, siku, & sejajar[cite: 1].</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: ALAT UKUR -->
+        <section id="alat-ukur" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-ruler-combined"></i> ALAT UKUR & ALAT BANTU UKUR</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('alat-ukur')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-3-cols" id="measuringGrid">
+                <!-- CARDS DI-GENERATE VIA JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 10: PENILAIAN -->
+        <section id="penilaian" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-chart-bar"></i> SISTEM PENILAIAN & TOLERANSI</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('penilaian')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="content-card">
+                <h3>Kriteria Penilaian Praktik Frais</h3>
+                <p>Formula Nilai Akhir Praktik: <strong>0.9 CP + 0.1 PP</strong>[cite: 1]</p>
+                <div class="table-responsive margin-top">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Kategori</th>
+                                <th>Toleransi Ukuran</th>
+                                <th>Tingkat Kekasaran (Rugo)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Umum</strong></td>
+                                <td>10 - 4 - 1[cite: 1]</td>
+                                <td>10 - 5 - 1[cite: 1]</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Khusus</strong></td>
+                                <td>10 - 1[cite: 1]</td>
+                                <td>10 - 5 - 1[cite: 1]</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ISO</strong></td>
+                                <td>10 - 0[cite: 1]</td>
+                                <td>10 - 1[cite: 1]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: K3L & 5R -->
+        <section id="k3" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-shield-alt"></i> K3L & 5R AREA MILLING</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('k3')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="warning-banner">
+                <i class="fas fa-exclamation-triangle warning-icon"></i>
+                <div>
+                    <h3>UTAMAKAN KESEHATAN, KESELAMATAN KERJA & LINGKUNGAN</h3>
+                    <p>Setiap mahasiswa wajib mematuhi seluruh peraturan K3L saat beraktivitas di Section Milling[cite: 1].</p>
+                </div>
+            </div>
+
+            <div class="grid-container grid-2-cols margin-top">
+                <div class="content-card">
+                    <h3>Aturan Keselamatan Diri & Mesin</h3>
+                    <ul class="checklist-group">
+                        <li><i class="fas fa-check-square"></i> Pakaian praktik wajib bersih dan rapi[cite: 1].</li>
+                        <li><i class="fas fa-check-square"></i> Rambut dan kuku wajib pendek[cite: 1].</li>
+                        <li><i class="fas fa-check-square"></i> Dilarang memakai aksesori (jam tangan, perhiasan, gelang tali)[cite: 1].</li>
+                        <li><i class="fas fa-check-square"></i> <strong>JANGAN MENINGGALKAN KUNCI SPINDLE DI ATAS HEAD MACHINE[cite: 1]!</strong></li>
+                        <li><i class="fas fa-check-square"></i> Wajib menggunakan kacamata pelindung saat penyayatan[cite: 1].</li>
+                        <li><i class="fas fa-check-square"></i> Pengencangan alat potong/benda kerja hanya dengan tangan[cite: 1].</li>
+                        <li><i class="fas fa-check-square"></i> Segera bersihkan ceceran coolant di lantai[cite: 1].</li>
+                    </ul>
+
+                    <div class="k3-ack-box margin-top">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="k3Check" onchange="toggleK3Ack(this.checked)">
+                            <span class="checkmark"></span>
+                            <strong>SAYA SUDAH MEMAHAMI DAN SIAP MEMATUHI ATURAN K3</strong>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3>Tabel Kompensasi Pelanggaran K3 & 5R</h3>
+                    <div class="table-responsive">
+                        <table class="styled-table penalty-table">
+                            <thead>
+                                <tr>
+                                    <th>Pelanggaran</th>
+                                    <th>Kompensasi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kunci spindle tertinggal di spindle</td><td><strong>10 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Kunci spindle tertinggal dan terputar</td><td><strong>25 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Kunci spindle tertinggal, terputar dan terlempar</td><td><strong>50 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Majun tertinggal setelah cleaning pulang</td><td><strong>10 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Barang tertinggal di area section milling</td><td><strong>10 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Tidak menggunakan kacamata saat pemesinan</td><td><strong>20 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Menyentuh benda kerja saat proses belum selesai</td><td><strong>10 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Tidak menekan tombol emergency saat istirahat</td><td><strong>5 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Tidak mematikan lampu penerangan saat istirahat</td><td><strong>10 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Mesin / toolbox dalam kondisi kotor</td><td><strong>10 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Menggunakan HP tanpa izin instruktur</td><td><strong>5 jam</strong>[cite: 1]</td></tr>
+                                <tr><td>Botol PET (AMDK) berada di area Mill</td><td><strong>5 jam</strong>[cite: 1]</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: ATURAN SECTION -->
+        <section id="aturan" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-clipboard-list"></i> ATURAN SECTION MILLING</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('aturan')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="content-card">
+                <div class="grid-container grid-2-cols">
+                    <div>
+                        <h4><i class="fas fa-clock"></i> Briefing & Logbook</h4>
+                        <ul>
+                            <li>Briefing dimulai 5 menit sebelum bel masuk (Shift 1: 07.55 ; Shift 2: 14.25)[cite: 1].</li>
+                            <li>Keterlambatan briefing dikenakan minus 0.5 jam[cite: 1].</li>
+                            <li>Logbook dikumpulkan di hari terakhir akhir section[cite: 1].</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-play-stop"></i> Start & Stop Pekerjaan</h4>
+                        <ul>
+                            <li>Wajib minta waktu START & STOP ke instruktur[cite: 1].</li>
+                            <li>Tidak lapor START/STOP dikenakan denda 5 jam[cite: 1].</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-comments"></i> Komunikasi & Fasilitas</h4>
+                        <ul>
+                            <li>Wajib menggunakan Bahasa Indonesia yang benar[cite: 1].</li>
+                            <li>WP dibuat di rumah 3 gambar sekaligus[cite: 1].</li>
+                            <li>Dilarang charge HP saat jam reguler[cite: 1].</li>
+                            <li>Dilarang membawa botol AMDK, wajib membawa tumbler[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 13: TARGET PRAKTIK -->
+        <section id="target" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-bullseye"></i> TARGET PRAKTIK MAHASISWA</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('target')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="grid-container grid-2-cols">
+                <div class="content-card">
+                    <h3>PROGRAM NON-SEAMLESS</h3>
+                    <div class="target-box">
+                        <h4>TMI / RTM</h4>
+                        <p>3 Latihan, 5 Kompetensi, 1 Ujian Komprehensif, 3 Produksi[cite: 1]</p>
+                    </div>
+                    <div class="target-box">
+                        <h4>TPM / PM</h4>
+                        <p>3 Latihan, 3 Kompetensi, 2 Produksi[cite: 1]</p>
+                    </div>
+                    <div class="target-box">
+                        <h4>TMK / TRMK</h4>
+                        <p>1 Latihan, 1 Kompetensi[cite: 1]</p>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3>PROGRAM SEAMLESS</h3>
+                    <div class="target-box">
+                        <h4>TMI / RTM SEAMLESS</h4>
+                        <p>3 Latihan, 3 Kompetensi, 1 Ujian Komprehensif, 1 Produksi[cite: 1]</p>
+                    </div>
+                    <div class="target-box">
+                        <h4>TPM / PM SEAMLESS</h4>
+                        <p>3 Latihan, 1 Kompetensi, 1 Produksi[cite: 1]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 14: EVALUASI KUIS INTERAKTIF -->
+        <section id="evaluasi" class="content-section">
+            <div class="section-title-box">
+                <h2><i class="fas fa-graduation-cap"></i> EVALUASI & KUIS INTERAKTIF</h2>
+                <button class="mark-complete-btn" onclick="toggleModuleCompletion('evaluasi')"><i class="fas fa-check-circle"></i> Tandai Selesai</button>
+            </div>
+
+            <div class="content-card">
+                <div id="quizContainer">
+                    <div class="quiz-header">
+                        <h3>Uji Pemahaman Materi Milling (20 Soal)</h3>
+                        <span id="quizScoreText">Skor: 0</span>
+                    </div>
+                    <div id="quizBody">
+                        <!-- SOAL DI-GENERATE VIA SCRIPT -->
+                    </div>
+                    <div class="quiz-controls margin-top">
+                        <button class="btn btn-primary" onclick="submitQuiz()"><i class="fas fa-paper-plane"></i> Kirim Jawaban</button>
+                        <button class="btn btn-secondary" onclick="resetQuiz()"><i class="fas fa-redo"></i> Ulangi Kuis</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BAGIAN INSTRUKTUR (WAJIB DI ATAS FOOTER) ================= -->
+        <section class="instructors-section">
+            <div class="section-header center-header">
+                <h2>INSTRUKTUR PRAKTIK FRAIS DASAR</h2>
+                <p>Instruktur yang mendampingi kegiatan Praktik Frais Dasar Politeknik ATMI Surakarta</p>
+            </div>
+
+            <div class="grid-container grid-2-cols instructor-grid">
+                <div class="instructor-card">
+                    <div class="instructor-photo-wrapper">
+                        <img src="assets/images/instructors/dedi-kristanto.png" alt="Dedi Kristanto" class="instructor-photo" onerror="this.src='https://via.placeholder.com/150?text=Dedi+Kristanto';">
+                    </div>
+                    <h3>Dedi Kristanto</h3>
+                    <span class="instructor-role">Instruktur Praktik Frais Dasar</span>
+                    <p class="institute-tag">Politeknik ATMI Surakarta</p>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-photo-wrapper">
+                        <img src="assets/images/instructors/aditya-wahyu.png" alt="Aditya Wahyu Handoko" class="instructor-photo" onerror="this.src='https://via.placeholder.com/150?text=Aditya+Wahyu';">
+                    </div>
+                    <h3>Aditya Wahyu Handoko</h3>
+                    <span class="instructor-role">Instruktur Praktik Frais Dasar</span>
+                    <p class="institute-tag">Politeknik ATMI Surakarta</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= MODAL DETAIL PRACTICE ================= -->
+    <div id="practiceModal" class="modal-backdrop hidden">
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="closePracticeModal()">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4>POLITEKNIK ATMI SURAKARTA</h4>
+                <p>MILLING INTRODUCTION – Media Pembelajaran Interaktif Praktik Frais Dasar</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Politeknik ATMI Surakarta. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
