@@ -5,8 +5,8 @@ const TOTAL_MODULES = 14;
 
 // DATA ALAT POTONG (CUTTING TOOLS) FROM PPT/PDF
 const cuttingToolsData = [
-    { id: 't1', name: 'End Mill Cutter', cat: 'Face Cutting', desc: 'Sisi potong pada ujung muka dan spiral. Tangkai lurus atau konus (Ø0.5-50mm).', img: 'assets/images/tools/end-mill.png' },
-    { id: 't2', name: 'Shell End Mill Cutter', cat: 'Face Cutting', desc: 'Memiliki lubang berpasak untuk dipasang pada arbor (Ø30-200mm).', img: 'assets/images/tools/shell-end-mill.png' },
+    { id: 't1', name: 'End Mill Cutter', cat: 'Face Cutting', desc: 'Sisi potong pada ujung muka dan spiral. Tangkai lurus atau konus (Ø0.5-50mm).', img: 'assets/images/End_Mill_Finishing.png', img: 'assets/images/End_Mill_Roughing.png' },
+    { id: 't2', name: 'Shell End Mill Cutter', cat: 'Face Cutting', desc: 'Memiliki lubang berpasak untuk dipasang pada arbor (Ø30-200mm).', img: 'assets/images/Shell_End_Mill_Roughing.png', img: 'assets/images/Shell_End_Mill_Finishing.png' },
     { id: 't3', name: 'Plain Mill Cutter', cat: 'Side Cutting', desc: 'Pengefraisan horisontal permukaan datar. Hanya memiliki sisi potong melingkar.', img: 'assets/images/tools/plain-mill.png' },
     { id: 't4', name: 'Disk Cutter', cat: 'Side Cutting', desc: 'Bentuk pipih untuk pembuatan alur (slot) atau pemotongan (slitting).', img: 'assets/images/tools/disk-cutter.png' },
     { id: 't5', name: 'Dove Tail Cutter', cat: 'Profil', desc: 'Menghasilkan profil ekor burung dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/tools/dovetail-cutter.png' },
