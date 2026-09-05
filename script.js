@@ -7,17 +7,17 @@ const TOTAL_MODULES = 14;
 const cuttingToolsData = [
     { id: 't1', name: 'End Mill Cutter', cat: 'Face Cutting', desc: 'Sisi potong pada ujung muka dan spiral. Tangkai lurus atau konus (Ø0.5-50mm).', img: 'assets/images/End_Mill_Finishing.png', img: 'assets/images/End_Mill_Roughing.png' },
     { id: 't2', name: 'Shell End Mill Cutter', cat: 'Face Cutting', desc: 'Memiliki lubang berpasak untuk dipasang pada arbor (Ø30-200mm).', img: 'assets/images/Shell_End_Mill_Roughing.png', img: 'assets/images/Shell_End_Mill_Finishing.png' },
-    { id: 't3', name: 'Plain Mill Cutter', cat: 'Side Cutting', desc: 'Pengefraisan horisontal permukaan datar. Hanya memiliki sisi potong melingkar.', img: 'assets/images/tools/plain-mill.png' },
-    { id: 't4', name: 'Disk Cutter', cat: 'Side Cutting', desc: 'Bentuk pipih untuk pembuatan alur (slot) atau pemotongan (slitting).', img: 'assets/images/tools/disk-cutter.png' },
-    { id: 't5', name: 'Dove Tail Cutter', cat: 'Profil', desc: 'Menghasilkan profil ekor burung dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/tools/dovetail-cutter.png' },
-    { id: 't6', name: 'T-Slot Cutter', cat: 'Profil', desc: 'Membuat alur T. Sisi potong melingkar dengan sudut helix berlawanan.', img: 'assets/images/tools/tslot-cutter.png' },
-    { id: 't7', name: 'Prisma Cutter', cat: 'Profil', desc: 'Menghasilkan profil V pada benda kerja dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/tools/prisma-cutter.png' },
-    { id: 't8', name: 'Hobbing Cutter', cat: 'Profil', desc: 'Digunakan pada mesin hobbing untuk profil roda gigi presisi.', img: 'assets/images/tools/hobbing-cutter.png' },
-    { id: 't9', name: 'Modul Cutter', cat: 'Profil', desc: 'Pembuatan roda gigi modul tertentu pada mesin konvensional.', img: 'assets/images/tools/modul-cutter.png' },
-    { id: 't10', name: 'Twist Drill', cat: 'Non-Cutter', desc: 'Membuat lubang awal pada benda kerja dengan tangkai silindris/konus.', img: 'assets/images/tools/twist-drill.png' },
-    { id: 't11', name: 'Reamer', cat: 'Non-Cutter', desc: 'Memperbesar lubang dengan tingkat ketelitian khusus (ISO).', img: 'assets/images/tools/reamer.png' },
-    { id: 't12', name: 'Tap / Sney', cat: 'Non-Cutter', desc: 'Membuat ulir dalam (Tap) atau ulir luar (Sney) metric/Whitworth.', img: 'assets/images/tools/tap-sney.png' },
-    { id: 't13', name: 'Boring Tool', cat: 'Non-Cutter', desc: 'Memperbesar lubang presisi menggunakan Boring Head.', img: 'assets/images/tools/boring-head.png' }
+    { id: 't3', name: 'Plain Mill Cutter', cat: 'Side Cutting', desc: 'Pengefraisan horisontal permukaan datar. Hanya memiliki sisi potong melingkar.', img: 'assets/images/Plain_Mill.png' },
+    { id: 't4', name: 'Disk Cutter', cat: 'Side Cutting', desc: 'Bentuk pipih untuk pembuatan alur (slot) atau pemotongan (slitting).', img: 'assets/images/Disk_Cutter.png' },
+    { id: 't5', name: 'Dove Tail Cutter', cat: 'Profil', desc: 'Menghasilkan profil ekor burung dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/Dove_tail.png' },
+    { id: 't6', name: 'T-Slot Cutter', cat: 'Profil', desc: 'Membuat alur T. Sisi potong melingkar dengan sudut helix berlawanan.', img: 'assets/images/T_Slot_Mill.png' },
+    { id: 't7', name: 'Prisma Cutter', cat: 'Profil', desc: 'Menghasilkan profil V pada benda kerja dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/Prisma_Cutter.png' },
+    { id: 't8', name: 'Hobbing Cutter', cat: 'Profil', desc: 'Digunakan pada mesin hobbing untuk profil roda gigi presisi.', img: 'assets/images/Hobbing_Cutter.png' },
+    { id: 't9', name: 'Modul Cutter', cat: 'Profil', desc: 'Pembuatan roda gigi modul tertentu pada mesin konvensional.', img: 'assets/images/Modul_Cutter.png' },
+    { id: 't10', name: 'Twist Drill', cat: 'Non-Cutter', desc: 'Membuat lubang awal pada benda kerja dengan tangkai silindris/konus.', img: 'assets/images/Twist_Drill.png' },
+    { id: 't11', name: 'Reamer', cat: 'Non-Cutter', desc: 'Memperbesar lubang dengan tingkat ketelitian khusus (ISO).', img: 'assets/images/Reamer.png' },
+    { id: 't12', name: 'Tap / Sney', cat: 'Non-Cutter', desc: 'Membuat ulir dalam (Tap) atau ulir luar (Sney) metric/Whitworth.', img: 'assets/images/Tap_Sney.png' },
+    { id: 't13', name: 'Boring Tool', cat: 'Non-Cutter', desc: 'Memperbesar lubang presisi menggunakan Boring Head.', img: 'assets/images/Boring_Head.png' }
 ];
 
 // DATA AKSESORI MESIN FRAIS
