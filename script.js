@@ -33,7 +33,7 @@ const aksesorisData = [
     { name: 'Swivel Vice', desc: 'Tanggem yang dapat diputar sudutnya pada satu poros horizontal.', img: 'assets/images/Swivel_Vice.png' },
     { name: 'Compound Vice', desc: 'Tanggem dengan sudut putar ganda untuk profil miring rumit.', img: 'assets/images/Compound_Vice.png' },
     { name: 'Rotary Table', desc: 'Aksesori pemutar untuk pengerjaan radius luar benda kerja.', img: 'assets/images/Rotary_Table.png' },
-    { name: 'Dividing Head', desc: 'Kepala pembagi untuk pembuatan segi banyak/hexagon atau roda gigi.', img: 'assets/images/Dividing_Head.png' }
+    { name: 'Dividing Head', desc: 'Kepala pembagi untuk pembuatan segi banyak/hexagon atau roda gigi.', img: 'assets/images/Deviding_Head.png' }
 ];
 
 // DATA ALAT UKUR
