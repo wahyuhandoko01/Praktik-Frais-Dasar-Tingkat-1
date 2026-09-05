@@ -8,8 +8,8 @@ const cuttingToolsData = [
     { id: 't1', name: 'End Mill Cutter', cat: 'Face Cutting', desc: 'Sisi potong pada ujung muka dan spiral. Tangkai lurus atau konus (Ø0.5-50mm).', img: 'assets/images/End_Mill_Finishing.png', img: 'assets/images/End_Mill_Roughing.png' },
     { id: 't2', name: 'Shell End Mill Cutter', cat: 'Face Cutting', desc: 'Memiliki lubang berpasak untuk dipasang pada arbor (Ø30-200mm).', img: 'assets/images/Shell_End_Mill_Roughing.png', img: 'assets/images/Shell_End_Mill_Finishing.png' },
     { id: 't3', name: 'Plain Mill Cutter', cat: 'Side Cutting', desc: 'Pengefraisan horisontal permukaan datar. Hanya memiliki sisi potong melingkar.', img: 'assets/images/Plain_Mill.png' },
-    { id: 't4', name: 'Disk Cutter', cat: 'Side Cutting', desc: 'Bentuk pipih untuk pembuatan alur (slot) atau pemotongan (slitting).', img: 'assets/images/Disk_Cutter.png' },
-    { id: 't5', name: 'Dove Tail Cutter', cat: 'Profil', desc: 'Menghasilkan profil ekor burung dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/Dove_tail.png' },
+    { id: 't4', name: 'Disk Cutter', cat: 'Side Cutting', desc: 'Bentuk pipih untuk pembuatan alur (slot) atau pemotongan (slitting).', img: 'assets/images/Disc_Cutter.png' },
+    { id: 't5', name: 'Dove Tail Cutter', cat: 'Profil', desc: 'Menghasilkan profil ekor burung dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/Dove_Tail.png' },
     { id: 't6', name: 'T-Slot Cutter', cat: 'Profil', desc: 'Membuat alur T. Sisi potong melingkar dengan sudut helix berlawanan.', img: 'assets/images/T_Slot_Mill.png' },
     { id: 't7', name: 'Prisma Cutter', cat: 'Profil', desc: 'Menghasilkan profil V pada benda kerja dengan sudut 45°, 60°, atau 90°.', img: 'assets/images/Prisma_Cutter.png' },
     { id: 't8', name: 'Hobbing Cutter', cat: 'Profil', desc: 'Digunakan pada mesin hobbing untuk profil roda gigi presisi.', img: 'assets/images/Hobbing_Cutter.png' },
@@ -22,30 +22,30 @@ const cuttingToolsData = [
 
 // DATA AKSESORI MESIN FRAIS
 const aksesorisData = [
-    { name: 'Drill Chuck Arbor', desc: 'Mencekam mata bor atau tool diameter kecil bertangkai silindris.', img: 'assets/images/accessories/drill-chuck-arbor.png' },
-    { name: 'Sleeve Arbor', desc: 'Mencekam End Mill atau Twist Drill dengan tangkai taper/konus.', img: 'assets/images/accessories/sleeve-arbor.png' },
-    { name: 'Collet Arbor', desc: 'Mencekam alat bertangkai silindris presisi tinggi (set kelipatan 0.5mm).', img: 'assets/images/accessories/collet-arbor.png' },
-    { name: 'Stub / Short Arbor', desc: 'Mencekam Shell End Mill Cutter tanpa/dengan ring pemandu.', img: 'assets/images/accessories/stub-arbor.png' },
-    { name: 'Long Arbor', desc: 'Digunakan pada mesin horisontal untuk pencekaman cutter melingkar.', img: 'assets/images/accessories/long-arbor.png' },
-    { name: 'Side Lock Arbor', desc: 'Pencekaman simpel dengan sekrup pengikat pada tangkai rata.', img: 'assets/images/accessories/side-lock-arbor.png' },
-    { name: 'Boring Head Arbor', desc: 'Pencekaman boring tool dilengkapi skala presisi pembuatan lubang.', img: 'assets/images/accessories/boring-head-arbor.png' },
-    { name: 'Fixed Vice', desc: 'Tanggem tetap yang paling sering digunakan pada meja milling.', img: 'assets/images/accessories/fixed-vice.png' },
-    { name: 'Swivel Vice', desc: 'Tanggem yang dapat diputar sudutnya pada satu poros horizontal.', img: 'assets/images/accessories/swivel-vice.png' },
-    { name: 'Compound Vice', desc: 'Tanggem dengan sudut putar ganda untuk profil miring rumit.', img: 'assets/images/accessories/compound-vice.png' },
-    { name: 'Rotary Table', desc: 'Aksesori pemutar untuk pengerjaan radius luar benda kerja.', img: 'assets/images/accessories/rotary-table.png' },
-    { name: 'Dividing Head', desc: 'Kepala pembagi untuk pembuatan segi banyak/hexagon atau roda gigi.', img: 'assets/images/accessories/dividing-head.png' }
+    { name: 'Drill Chuck Arbor', desc: 'Mencekam mata bor atau tool diameter kecil bertangkai silindris.', img: 'assets/images/Drill_Chuck.png' },
+    { name: 'Sleeve Arbor', desc: 'Mencekam End Mill atau Twist Drill dengan tangkai taper/konus.', img: 'assets/images/Sleeve_Arbor.png' },
+    { name: 'Collet Arbor', desc: 'Mencekam alat bertangkai silindris presisi tinggi (set kelipatan 0.5mm).', img: 'assets/images/Collet_Arbor.png' },
+    { name: 'Stub / Short Arbor', desc: 'Mencekam Shell End Mill Cutter tanpa/dengan ring pemandu.', img: 'assets/images/Stub_Arbor.png' },
+    { name: 'Long Arbor', desc: 'Digunakan pada mesin horisontal untuk pencekaman cutter melingkar.', img: 'assets/images/Long_Arbor.png' },
+    { name: 'Side Lock Arbor', desc: 'Pencekaman simpel dengan sekrup pengikat pada tangkai rata.', img: 'assets/images/Side_lock.png' },
+    { name: 'Boring Head Arbor', desc: 'Pencekaman boring tool dilengkapi skala presisi pembuatan lubang.', img: 'assets/images/Boring_Head.png' },
+    { name: 'Fixed Vice', desc: 'Tanggem tetap yang paling sering digunakan pada meja milling.', img: 'assets/images/Fixed_Vice.png' },
+    { name: 'Swivel Vice', desc: 'Tanggem yang dapat diputar sudutnya pada satu poros horizontal.', img: 'assets/images/Swivel_Vice.png' },
+    { name: 'Compound Vice', desc: 'Tanggem dengan sudut putar ganda untuk profil miring rumit.', img: 'assets/images/Compound_Vice.png' },
+    { name: 'Rotary Table', desc: 'Aksesori pemutar untuk pengerjaan radius luar benda kerja.', img: 'assets/images/Rotary_Table.png' },
+    { name: 'Dividing Head', desc: 'Kepala pembagi untuk pembuatan segi banyak/hexagon atau roda gigi.', img: 'assets/images/Dividing_Head.png' }
 ];
 
 // DATA ALAT UKUR
 const measuringData = [
-    { name: 'Square Line (SL)', desc: 'Mengecek kesikuan bidang terhadap bidang referensi.', img: 'assets/images/measuring/square-line.png' },
-    { name: 'Dial & Vernier Caliper', desc: 'Mengukur ukuran benda kerja awal dan akhir.', img: 'assets/images/measuring/dial-caliper.png' },
-    { name: 'Bevel Protractor', desc: 'Pengukuran dan setting sudut kemiringan secara presisi.', img: 'assets/images/measuring/bevel-protractor.png' },
-    { name: 'Bevel Transfer', desc: 'Mentransfer sudut dari Bevel Protractor ke benda kerja/cekam.', img: 'assets/images/measuring/bevel-transfer.png' },
-    { name: 'Outside Micrometer', desc: 'Mengukur dimensi dengan ketelitian khusus (0.01 mm).', img: 'assets/images/measuring/micrometer.png' },
-    { name: 'Rugo Test', desc: 'Membandingkan tingkat kekasaran permukaan benda kerja.', img: 'assets/images/measuring/rugo-test.png' },
-    { name: 'Plug Thread Gauge', desc: 'Mengecek lubang ulir dengan sisi Go dan No-Go.', img: 'assets/images/measuring/plug-thread-gauge.png' },
-    { name: 'Block Gauge', desc: 'Mengukur alur/slot dengan presisi tinggi.', img: 'assets/images/measuring/block-gauge.png' }
+    { name: 'Square Line (SL)', desc: 'Mengecek kesikuan bidang terhadap bidang referensi.', img: 'assets/images/Square_Line.png' },
+    { name: 'Dial & Vernier Caliper', desc: 'Mengukur ukuran benda kerja awal dan akhir.', img: 'assets/images/Dial_Caliper.png' },
+    { name: 'Bevel Protractor', desc: 'Pengukuran dan setting sudut kemiringan secara presisi.', img: 'assets/images/Bevel_Protractor.png' },
+    { name: 'Bevel Transfer', desc: 'Mentransfer sudut dari Bevel Protractor ke benda kerja/cekam.', img: 'assets/images/Bevel_Transfer.png' },
+    { name: 'Outside Micrometer', desc: 'Mengukur dimensi dengan ketelitian khusus (0.01 mm).', img: 'assets/images/Outside_Micro.png' },
+    { name: 'Rugo Test', desc: 'Membandingkan tingkat kekasaran permukaan benda kerja.', img: 'assets/images/Rugo_Test.png' },
+    { name: 'Plug Thread Gauge', desc: 'Mengecek lubang ulir dengan sisi Go dan No-Go.', img: 'assets/images/PTG.png' },
+    { name: 'Block Gauge', desc: 'Mengukur alur/slot dengan presisi tinggi.', img: 'assets/images/Block_Gauge.png' }
 ];
 
 // SOAL KUIS EVALUASI (20 SOAL ACCORDING TO PPT/PDF)
